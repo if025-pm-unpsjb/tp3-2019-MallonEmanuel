@@ -2,6 +2,10 @@
 .cpu cortex-m3
 
 /* Generate Thumb instructions. This performs the same action as .code 16 */
+/*
+	Compila conjunto mas reducidos de los conjuntos de intrucciones.
+	pagin 133 tabla 102
+*/
 .thumb
 
 /* nvic -- vector interrupt table */
