@@ -67,7 +67,7 @@ _start:
    mov  r2, #0x20			//
 
    orr  r1, r2             // logical OR between r1 and r2 registers.
-   orr  r1, r3
+
    strb r1, [r0]           // store register r1 value into memory adress [r0].
 
    ldr  r0, =0x2009C03A    // set gpio (FIO1SET2, see page 135 in LPC17xx manual)
@@ -87,11 +87,11 @@ _start:
 
 mainloop:
    strb r2, [r0]           // store the value in r2 in the memory address [r0]
-   strb r3, [r1]
+
    bl 	dowait             // execute dowait
 
    strb r2, [r1]           // store the value in r2 in the memory address [r1]
-   strb r3, [r0]
+
    bl   dowait             // execute dowait
    b    mainloop           // goto mainloop
 
