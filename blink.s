@@ -64,7 +64,7 @@ _start:
    //mov  r2, #0x04          // store ‭the value 0000100‬ in r2, this value is used (ORIGINAL)
                            // to change the direction mode of the GPIOs pins
                            // into which the mbed LPC1768 LED1 is connected.
-   mov  r2, #0x20			//
+   mov  r2, #0x90			//
 
    orr  r1, r2             // logical OR between r1 and r2 registers.
    orr  r1, r3
@@ -75,7 +75,7 @@ _start:
    ldr  r1, =0x2009C03E    // clear gpio (FIO1CLR2, see page 136 in LPC17xx manual)
 
    //mov  r2, #0x04          // store the value 0100 in r2 (ORIGINAL)
-   mov  r2, #0x20          // a
+   mov  r2, #0x90          // a
    //mov  r3, #0x24
 
 // 	4     3  2     1			led
